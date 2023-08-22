@@ -1,0 +1,386 @@
+{% extends "layout.html" %***REMOVED***
+{% block content %***REMOVED***
+
+<div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-theme="dark">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
+  </div>
+  <div class="carousel-inner">
+    <div class="carousel-item active">
+      <div class="row">
+        <div class="col-4 text-center">
+          <div class="img-container">
+            <img class="bd-placeholder-img img-fluid" src="/static/assets/images/webdevelopment.jpg" alt="web development">
+          </div>
+          <div class="container my-4">
+            <h4>Web Development</h4>
+            <p>Flask, HTML 5, CSS 3, Bootstrap 5, Jinja, WTForms</p>
+          </div>
+        </div>
+        <div class="col-4 text-center">
+          <div class="img-container">
+            <img class="bd-placeholder-img img-fluid" src="/static/assets/images/dataanalysis.jpg" alt="data analysis">
+          </div>
+          <div class="my-4">
+            <h4>Data Analysis and Visualization</h4>
+            <p>Pandas, NumPy, Matplotlib, Plotly, Scikit-learn, Seaborn</p>
+          </div>
+        </div>
+        <div class="col-4 text-center">
+          <div class="img-container">
+            <img class="bd-placeholder-img img-fluid" src="/static/assets/images/webscrapping.jpg" alt="web scraping">
+          </div>
+          <div class="my-4">
+            <h4>Web Scraping, Automation and APIs</h4>
+            <p>Beautiful Soup, Selenium, Requests, REST, APIs</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
+        <div class="col-4 text-center">
+          <div class="img-container">
+            <img class="bd-placeholder-img img-fluid" src="/static/assets/images/database.jpg" alt="database">
+          </div>
+          <div class="my-4">
+            <h4>Databases</h4>
+            <p>PostgreSQL, SQLite</p>
+          </div>
+        </div>
+        <div class="col-4 text-center">
+          <div class="img-container">
+            <img class="bd-placeholder-img img-fluid" src="/static/assets/images/terminal.jpg" alt="terminal">
+          </div>
+          <div class="my-4">
+            <h4>Version Control and Collaboration</h4>
+            <p>Git, GitHub</p>
+          </div>
+        </div>
+        <div class="col-4 text-center">
+          <div class="img-container">
+            <img class="bd-placeholder-img img-fluid" src="/static/assets/images/softwaredevelopment.jpg" alt="software development">
+          </div>
+          <div class="my-4">
+            <h4>GUI Desktop Application</h4>
+            <p>Tkinter, Turtle, Pillow</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="pt-5">
+    <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+
+
+<div class="container marketing my-2">
+  <div class="text-center">
+    <a href="https://github.com/dieegogutierrez" target="_blank" class="btn btn-outline-dark mx-auto">Explore My GitHub Profile</a>
+  </div>
+
+  <hr class="featurette-divider">
+  <div class="row featurette py-3">
+
+    <div class="col-md-12 text-center mb-5">
+      <h2 class="featurette-heading fw-normal lh-1">Cafe Website. <span class="text-body-secondary">London Work-Friendly Cafes Website.</span></h2>
+      <p class="lead">This platform is designed to help you discover the best cafes in London, England, where you can comfortably work, relax, and enjoy a great cup of coffee.</p>
+      <a href="https://cafewebsite-gjlq.onrender.com/cafe" target="_blank" class="btn btn-outline-dark">Visit Website</a>
+    </div>
+
+<div class="row">
+
+    <div class="col-md-5 order-md-2 d-flex align-items-start">
+      <a href="https://github.com/dieegogutierrez/CafeWebsite" target="_blank">
+        <img src="/static/assets/images/cafewebsite.png" alt="cafewebsite" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto img-portfolio">
+      </a>
+    </div>
+
+
+
+    <div class="col-md-7">
+      <h3 class="featurette-heading fw-normal lh-1">Features and Technologies:</h3>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Features</th>
+          <th>Technologies</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>User authentication</td>
+          <td>HTML5, CSS3</td>
+        </tr>
+        <tr>
+          <td>Password hashing</td>
+          <td>Bootstrap 5, WTForms</td>
+        </tr>
+        <tr>
+          <td>Password recovery</td>
+          <td>SQLAlchemy, SQLite</td>
+        </tr>
+        <tr>
+          <td>"Remember me" functionality</td>
+          <td>PostgreSQL, Render</td>
+        </tr>
+        <tr>
+          <td>User-friendly interface for cafe listings</td>
+          <td>Flask, Jinja</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  </div>
+
+  <hr class="featurette-divider">
+  <div class="row featurette py-3">
+
+    <div class="col-md-12 text-center mb-5">
+      <h2 class="featurette-heading fw-normal lh-1">TODO List Web Application. <span class="text-body-secondary">See for yourself.</span></h2>
+      <p class="lead">TodoFlask is a web application that allows users to efficiently manage their tasks with a variety of features including user authentication, password hashing for security, task prioritization through starring, task coloring, and filtering by time periods.</p>
+      <a href="https://todo-list-1dg7.onrender.com/" target="_blank" class="btn btn-outline-dark">Visit Website</a>
+    </div>
+<div class="row">
+
+    <div class="col-md-5 order-md-1 d-flex align-items-start">
+      <a href="https://github.com/dieegogutierrez/TODOList" target="_blank">
+        <img src="/static/assets/images/todowebsite.png" alt="todowebsite" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto img-portfolio">
+      </a>
+    </div>
+
+     <div class="col-md-7 order-md-2">
+      <h3 class="featurette-heading fw-normal lh-1">Features and Technologies:</h3>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Features</th>
+          <th>Technologies</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>User authentication</td>
+          <td>HTML5, CSS3</td>
+        </tr>
+        <tr>
+          <td>Password hashing and recovery</td>
+          <td>Bootstrap 5, WTForms</td>
+        </tr>
+        <tr>
+          <td>Filtering tasks by period</td>
+          <td>SQLAlchemy, SQLite</td>
+        </tr>
+        <tr>
+          <td>"Remember me" functionality</td>
+          <td>Render</td>
+        </tr>
+        <tr>
+          <td>Task prioritization and coloring</td>
+          <td>Flask, Jinja</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  </div>
+
+  <hr class="featurette-divider">
+  <div class="row featurette py-3">
+
+    <div class="col-md-12 text-center mb-5">
+      <h2 class="featurette-heading fw-normal lh-1">Web Scraping and Data Analysis. <span class="text-body-secondary">Space Data Analysis Project.</span></h2>
+      <p class="lead">This repository contains code and data for scraping spaceflight data from nextspaceflight.com using Python, and visualizing the results using Matplotlib, Seaborn, and Plotly in a Google Colab notebook.</p>
+    </div>
+<div class="row">
+
+    <div class="col-md-5 order-md-2 d-flex align-items-start">
+      <a href="https://github.com/dieegogutierrez/SpaceRaceAnalysis" target="_blank">
+        <img src="/static/assets/images/spaceanalysis.png" alt="spaceanalysis" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto img-portfolio">
+      </a>
+    </div>
+
+    <div class="col-md-7 order-md-1">
+      <h3 class="featurette-heading fw-normal lh-1">Features and Technologies:</h3>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Features</th>
+          <th>Technologies</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Scrap data and save as csv file</td>
+          <td>Beautiful Soup, Pandas</td>
+        </tr>
+        <tr>
+          <td>Data manipulation, line and bar plots</td>
+          <td>Numpy, Matplotlib</td>
+        </tr>
+        <tr>
+          <td>Interactive plots, choropleth and sunburst</td>
+          <td>Plotly</td>
+        </tr>
+        <tr>
+          <td>Scatter plots and rolling average</td>
+          <td>Seaborn</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  </div>
+
+<hr class="featurette-divider">
+<div class="row featurette py-3">
+
+  <div class="col-md-12 text-center mb-5">
+    <h2 class="featurette-heading fw-normal lh-1">Data Analysis. <span class="text-body-secondary">Fatal Force: Police Shootings in the US.</span></h2>
+    <p class="lead">This project aims to analyze this dataset along with additional datasets containing US census data on poverty rate, high school graduation rate, median household income, and racial demographics. This analysis will explore the relationships and insights that can be derived from these datasets using various data visualization libraries such as Matplotlib, Seaborn, and Plotly. .</p>
+  </div>
+<div class="row">
+
+  <div class="col-md-5 order-md-1 d-flex align-items-start">
+    <a href="https://github.com/dieegogutierrez/FatalForce" target="_blank">
+      <img src="/static/assets/images/fatalforceanalysis.png" alt="fatalforceanalysis" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto img-portfolio">
+    </a>
+  </div>
+
+  <div class="col-md-7 order-md-2">
+      <h3 class="featurette-heading fw-normal lh-1">Features and Technologies:</h3>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Features</th>
+          <th>Technologies</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Data cleaning and manipulation</td>
+          <td>Pandas, Numpy</td>
+        </tr>
+        <tr>
+          <td>Line and bar plots</td>
+          <td>Matplotlib</td>
+        </tr>
+        <tr>
+          <td>Interactive plots, grouped bar and pie charts</td>
+          <td>Plotly</td>
+        </tr>
+        <tr>
+          <td>Kernel density estimation and regression line</td>
+          <td>Seaborn</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+</div>
+
+<hr class="featurette-divider">
+<div class="row featurette py-3">
+
+  <div class="col-md-12 text-center mb-5">
+    <h2 class="featurette-heading fw-normal lh-1">GUI Desktop Application. <span class="text-body-secondary">Watermark App.</span></h2>
+    <p class="lead">This app allows users to easily add watermarks to their JPG or PNG images. With a simple and intuitive interface, users can customize various watermark properties such as font style, color, size, opacity, and position before saving the watermarked image.</p>
+  </div>
+<div class="row">
+
+  <div class="col-md-5 order-md-2 d-flex align-items-start">
+    <a href="https://github.com/dieegogutierrez/WatermarkApp" target="_blank">
+      <img src="/static/assets/images/watermark-app.png" alt="watermark-app" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto img-portfolio">
+    </a>
+  </div>
+
+  <div class="col-md-7 order-md-1">
+      <h3 class="featurette-heading fw-normal lh-1">Features and Technologies:</h3>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Features</th>
+          <th>Technologies</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Custom font style, size, opacity and position</td>
+          <td>Python</td>
+        </tr>
+        <tr>
+          <td>Choose from different font colors</td>
+          <td>Matplotlib</td>
+        </tr>
+        <tr>
+          <td>Image handling, preview of your watermarked file</td>
+          <td>Pillow</td>
+        </tr>
+        <tr>
+          <td>Intuitive interface, save your watermarked file</td>
+          <td>Tkinter</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+</div>
+
+<hr class="featurette-divider">
+<div class="row featurette py-3">
+
+  <div class="col-md-12 text-center mb-5">
+    <h2 class="featurette-heading fw-normal lh-1">GUI Desktop Game. <span class="text-body-secondary">Breakout Game.</span></h2>
+    <p class="lead">A classic Breakout game implemented in Python using the Turtle graphics library. Breakout is a simple yet addictive arcade game where you control a paddle to bounce a ball and break bricks.</p>
+  </div>
+<div class="row">
+
+  <div class="col-md-5 order-md-1 d-flex align-items-start">
+    <a href="https://github.com/dieegogutierrez/BreakOutGame" target="_blank">
+      <img src="/static/assets/images/breakoutgame.png" alt="breakoutgame" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto img-portfolio">
+    </a>
+  </div>
+
+  <div class="col-md-7 order-md-2">
+      <h3 class="featurette-heading fw-normal lh-1">Features and Technologies:</h3>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Features</th>
+          <th>Technologies</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Save/update high score</td>
+          <td>Python</td>
+        </tr>
+        <tr>
+          <td>Pause and restart</td>
+          <td>Turtle</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+
+</div>
+</div>
+
+{% endblock content %***REMOVED***
