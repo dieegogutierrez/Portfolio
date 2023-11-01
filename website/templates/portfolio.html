@@ -1,7 +1,7 @@
 {% extends "layout.html" %***REMOVED***
 {% block content %***REMOVED***
 
-<div id="myCarousel" class="carousel slide mb-5" data-bs-ride="carousel" data-bs-theme="dark">
+<div id="myCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-theme="dark">
   <div class="carousel-indicators">
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="" aria-label="Slide 1"></button>
     <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2" class="active" aria-current="true"></button>
@@ -9,6 +9,27 @@
   <div class="carousel-inner">
     <div class="carousel-item active">
       <div class="row">
+
+        <div class="col-4 text-center">
+          <div class="img-container">
+            <img class="bd-placeholder-img img-fluid" src="/static/assets/images/dataanalysis.jpg" alt="data analysis">
+          </div>
+          <div class="my-4">
+            <h4>Data Analysis and Visualization</h4>
+            <p>Python, R, SQL, Tableau, Spreadsheets</p>
+          </div>
+        </div>
+
+        <div class="col-4 text-center">
+          <div class="img-container">
+            <img class="bd-placeholder-img img-fluid" src="/static/assets/images/database.jpg" alt="database">
+          </div>
+          <div class="my-4">
+            <h4>Databases</h4>
+            <p>SQL, PostgreSQL, Google BigQuery</p>
+          </div>
+        </div>
+
         <div class="col-4 text-center">
           <div class="img-container">
             <img class="bd-placeholder-img img-fluid" src="/static/assets/images/webdevelopment.jpg" alt="web development">
@@ -18,15 +39,11 @@
             <p>Flask, HTML 5, CSS 3, Bootstrap 5</p>
           </div>
         </div>
-        <div class="col-4 text-center">
-          <div class="img-container">
-            <img class="bd-placeholder-img img-fluid" src="/static/assets/images/dataanalysis.jpg" alt="data analysis">
-          </div>
-          <div class="my-4">
-            <h4>Data Analysis and Visualization</h4>
-            <p>Languages: Python and R, Jupyter Notebooks: Kaggle and Google Colab</p>
-          </div>
-        </div>
+
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div class="row">
         <div class="col-4 text-center">
           <div class="img-container">
             <img class="bd-placeholder-img img-fluid" src="/static/assets/images/webscrapping.jpg" alt="web scraping">
@@ -36,19 +53,7 @@
             <p>Beautiful Soup, Selenium, Requests, APIs</p>
           </div>
         </div>
-      </div>
-    </div>
-    <div class="carousel-item">
-      <div class="row">
-        <div class="col-4 text-center">
-          <div class="img-container">
-            <img class="bd-placeholder-img img-fluid" src="/static/assets/images/database.jpg" alt="database">
-          </div>
-          <div class="my-4">
-            <h4>Databases</h4>
-            <p>SQL, PostgreSQL</p>
-          </div>
-        </div>
+
         <div class="col-4 text-center">
           <div class="img-container">
             <img class="bd-placeholder-img img-fluid" src="/static/assets/images/terminal.jpg" alt="terminal">
@@ -70,7 +75,7 @@
       </div>
     </div>
   </div>
-  <div class="pt-5">
+  <div class="pt-1">
     <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
       <span class="carousel-control-prev-icon" aria-hidden="true"></span>
       <span class="visually-hidden">Previous</span>
@@ -84,9 +89,58 @@
 
 
 
-<div class="container marketing my-2">
+<div class="container marketing">
   <div class="text-center">
     <a href="https://github.com/dieegogutierrez" target="_blank" class="btn btn-outline-dark mx-auto">Explore My GitHub Profile</a>
+  </div>
+
+  <hr class="featurette-divider">
+  <div class="row featurette py-3">
+
+    <div class="col-md-12 text-center mb-5">
+      <h2 class="featurette-heading fw-normal lh-1">Data Analysis. <span class="text-body-secondary">Google Data Analytics Case Study - Bellabeat.</span></h2>
+      <p class="lead">This analysis is part of a Capstone Project for the Google Data Analytics Certificate program (Bellabeat).</p>
+      <a href="https://www.kaggle.com/code/dieegogutierrez/google-data-analytics-capstone-project-bellabeat" target="_blank" class="btn btn-outline-dark">Kaggle Notebook</a>
+    </div>
+<div class="row">
+
+    <div class="col-md-5 order-md-2 d-flex align-items-start">
+      <a href="https://github.com/dieegogutierrez/Bellabeat" target="_blank">
+        <img src="/static/assets/images/bellabeat.png" alt="bellabeat" class="bd-placeholder-img bd-placeholder-img-lg featurette-image img-fluid mx-auto img-portfolio">
+      </a>
+    </div>
+
+    <div class="col-md-7 order-md-1">
+      <h3 class="featurette-heading fw-normal lh-1">Features and Technologies:</h3>
+      <table class="table">
+        <thead>
+        <tr>
+          <th>Features</th>
+          <th>Technologies</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td>Data Analysis</td>
+          <td>Google Sheets, Google BigQuery</td>
+        </tr>
+        <tr>
+          <td>Data Cleaning and Manipulation</td>
+          <td>SQL</td>
+        </tr>
+        <tr>
+          <td>Data Visualization</td>
+          <td>Tableau</td>
+        </tr>
+        <tr>
+          <td>Full Report</td>
+          <td>Kaggle Notebook</td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+
   </div>
 
   <hr class="featurette-divider">
