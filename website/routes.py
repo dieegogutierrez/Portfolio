@@ -42,3 +42,34 @@ def contact():
         mail.send(msg)
         return render_template("contact.html", msg_sent=True, form=form)
     return render_template("contact.html", msg_sent=False, form=form)
+
+
+# Data Engineering route
+@app.route('/portfolio/dataengineering')
+def data_engineering():
+    return render_template('dataengineering.html')
+
+# Data Analysis route
+@app.route('/portfolio/dataanalysis')
+def data_analysis():
+    return render_template('dataanalysis.html')
+
+# Web Development route
+@app.route('/portfolio/webdevelopment')
+def web_development():
+    return render_template('webdevelopment.html')
+
+# GUI Applications route
+@app.route('/portfolio/guiapplications')
+def gui_applications():
+    return render_template('guiapplications.html')
+
+
+@app.errorhandler(404)
+def error_404(error):
+    return render_template('404.html'), 404
+
+
+@app.errorhandler(500)
+def error_500(error):
+    return render_template('500.html'), 500
