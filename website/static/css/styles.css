@@ -1,54 +1,54 @@
 .background-gradient {
     background-image: linear-gradient(135deg, #ffffff, #eeeeee);
-***REMOVED***
+}
 .profile-image {
     border-radius: 100%;
     width: 18rem;
-***REMOVED***
+}
 .background-about-image {
     background-image: url("/static/assets/images/brazil-canada-flag.jpg");
     min-height: 15rem;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-***REMOVED***
+}
 .background-contact-image {
     background-image: url("/static/assets/images/contact.jpg");
     background-size: 100% auto;
     background-position: left center;
     background-repeat: no-repeat;
-***REMOVED***
+}
 .background-dataengineering-image {
     background-image: url("/static/assets/images/terminal.jpg");
     background-size: 100% auto;
     background-position: left center;
     background-repeat: no-repeat;
-***REMOVED***
+}
 .background-dataanalysis-image {
     background-image: url("/static/assets/images/datavisualization.jpg");
     background-size: 100% auto;
     background-position: left center;
     background-repeat: no-repeat;
-***REMOVED***
+}
 .background-webdevelopment-image {
     background-image: url("/static/assets/images/webdev.jpg");
     background-size: 100% auto;
     background-position: left center;
     background-repeat: no-repeat;
-***REMOVED***
+}
 .background-guiapplications-image {
     background-image: url("/static/assets/images/guiapp.jpg");
     background-size: 100% auto;
     background-position: left center;
     background-repeat: no-repeat;
-***REMOVED***
+}
 .table {
     --bs-table-bg: None
-***REMOVED***
+}
 .card-img-top {
     height: 12rem; 
     object-fit: cover; 
-***REMOVED***
+}
 .img-portfolio {
     display: block;
     margin: auto;
@@ -57,15 +57,15 @@
     max-width: 100%;
     max-height: 20rem; 
     object-fit: contain; 
-***REMOVED***
+}
 .featurette-image-container {
     display: flex;
     justify-content: center;
     align-items: center;
     height: 20rem;
     overflow: hidden;
-***REMOVED***
+}
 .featurette-divider {
     margin-top: 2rem;
     margin-bottom: 2rem;
-***REMOVED***
+}

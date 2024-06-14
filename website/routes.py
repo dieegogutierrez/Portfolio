@@ -35,10 +35,10 @@ def contact():
         msg = Message('New Message',
                       sender='noreply@gmail.com',
                       recipients=[os.getenv('MAIL_HOTMAIL')])
-        msg.body = f"Name: {request.form['name']***REMOVED***\n"\
-                   f"Email: {request.form['email']***REMOVED***\n"\
-                   f"Phone: {request.form['phone']***REMOVED***\n"\
-                   f"Message: {request.form['message']***REMOVED***"
+        msg.body = f"Name: {request.form['name']}\n"\
+                   f"Email: {request.form['email']}\n"\
+                   f"Phone: {request.form['phone']}\n"\
+                   f"Message: {request.form['message']}"
         mail.send(msg)
         return render_template("contact.html", msg_sent=True, form=form)
     return render_template("contact.html", msg_sent=False, form=form)
