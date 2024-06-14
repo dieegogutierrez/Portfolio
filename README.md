@@ -155,8 +155,7 @@ On Cloud Build Repositories 2nd gen create a new host connection.
 
 Link your repository.
 
-Create a trigger.
-Adapt the code below and create a cloudbuild.yml or use the inline option while creating the trigger.
+Create a trigger and adapt the code below and create a cloudbuild.yml or use the inline option while creating the trigger.
 ```yml
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
