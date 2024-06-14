@@ -159,7 +159,7 @@ Create a trigger and adapt the code below and create a cloudbuild.yml or use the
 ```yml
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['compute', 'ssh', 'your-vm-instance-name', '--zone', 'your-zone' '--command', 'cd /home/your_username/Portfolio && git pull origin main && sudo systemctl restart portfolio']
+    args: ['compute', 'ssh', 'your-vm-instance-name', '--zone', 'your-zone', '--command', 'cd /home/your_username/Portfolio && git pull origin main && sudo systemctl restart portfolio']
 options:
   logging: CLOUD_LOGGING_ONLY
 ```
