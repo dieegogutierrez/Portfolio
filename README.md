@@ -161,4 +161,6 @@ Adapt the code below and create a cloudbuild.yml or use the inline option while 
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
     args: ['compute', 'ssh', 'your-vm-instance-name', '--command', 'cd /home/your_username/Portfolio && git pull origin main && sudo systemctl restart portfolio']
+options:
+  logging: CLOUD_LOGGING_ONLY
 ```
