@@ -145,7 +145,7 @@ sudo systemctl status portfolio
 sudo systemctl status nginx
 ```
 
-## Step 6: Continuos Deployment
+## Step 6: Continuos Deployment with Cloud Build
 
 [DOCUMENTATION](https://cloud.google.com/build/docs/automating-builds/github/connect-repo-github#console)
 
