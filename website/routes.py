@@ -33,7 +33,7 @@ def contact():
     form = MyForm()
     if form.validate_on_submit():
         msg = Message('New Message',
-                      sender='noreply@gmail.com',
+                      sender=os.getenv('MAIL_USERNAME'),
                       recipients=[os.getenv('MAIL_HOTMAIL')])
         msg.body = f"Name: {request.form['name']}\n"\
                    f"Email: {request.form['email']}\n"\
