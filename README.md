@@ -43,17 +43,17 @@ Clone your portfolio repository from GitHub:
 ```bash
 git clone https://github.com/dieegogutierrez/Portfolio.git
 ```
-Add the local bin directory to the PATH environment variable to ensure all installed packages can be executed:
-```bash
-echo 'export PATH=$PATH:/home/dieego_gutierrez/.local/bin' >> ~/.bashrc
-```
-Source the .bashrc file to apply the changes made to the PATH environment variable:
-```bash
-source ~/.bashrc
-```
 Change directory to the cloned repository:
 ```bash
 cd Portfolio/
+```
+Create a virtual environment:
+```bash
+python3 -m venv venv
+```
+Activate the virtual environemnt:
+```bash
+source venv/bin/activate
 ```
 Install the required Python packages as specified in the requirements.txt file:
 ```bash
@@ -80,7 +80,8 @@ After=network.target
 User=dieego_gutierrez
 Group=www-data
 WorkingDirectory=/home/dieego_gutierrez/Portfolio
-ExecStart=/home/dieego_gutierrez/.local/bin/gunicorn --workers 3 --bind unix:/home/dieego_gutierrez/Portfolio/portfolio.sock run:app
+Environment="PATH=/home/dieego_gutierrez/Portfolio/venv/bin"
+ExecStart=/home/dieego_gutierrez/Portfolio/venv/bin/gunicorn --workers 3 --bind unix:/home/dieego_gutierrez/Portfolio/portfolio.sock run:app
 
 [Install]
 WantedBy=multi-user.target
@@ -159,7 +160,7 @@ Create a trigger and adapt the code below and create a cloudbuild.yml or use the
 ```yml
 steps:
   - name: 'gcr.io/cloud-builders/gcloud'
-    args: ['compute', 'ssh', 'your-vm-instance-name', '--zone', 'your-zone', '--command', 'cd /home/your_username/Portfolio && git pull origin main && sudo systemctl restart portfolio']
+    args: ['compute', 'ssh', 'your-vm-instance-name', '--zone', 'your-zone', '--command', 'git config --global --add safe.directory /home/your_username/Portfolio && cd /home/your_username/Portfolio && git pull origin main && sudo systemctl restart portfolio']
 options:
   logging: CLOUD_LOGGING_ONLY
 ```
