@@ -1,5 +1,5 @@
 import os
-from website import app, mail
+from website import app, mail, recaptcha
 from website.forms import MyForm
 from datetime import datetime
 from flask import render_template, request
@@ -31,18 +31,21 @@ def portfolio():
 @app.route('/contact', methods=['GET', 'POST'])
 def contact():
     form = MyForm()
+    recaptcha_site_key = app.config['RECAPTCHA_SITE_KEY']
     if form.validate_on_submit():
-        msg = Message('New Message',
-                      sender=os.getenv('MAIL_USERNAME'),
-                      recipients=[os.getenv('MAIL_HOTMAIL')])
-        msg.body = f"Name: {request.form['name']}\n"\
-                   f"Email: {request.form['email']}\n"\
-                   f"Phone: {request.form['phone']}\n"\
-                   f"Message: {request.form['message']}"
-        mail.send(msg)
-        return render_template("contact.html", msg_sent=True, form=form)
-    return render_template("contact.html", msg_sent=False, form=form)
-
+        if recaptcha.verify():
+            msg = Message('New Message',
+                          sender=os.getenv('MAIL_USERNAME'),
+                          recipients=[os.getenv('MAIL_HOTMAIL')])
+            msg.body = f"Name: {request.form['name']}\n"\
+                       f"Email: {request.form['email']}\n"\
+                       f"Phone: {request.form['phone']}\n"\
+                       f"Message: {request.form['message']}"
+            mail.send(msg)
+            return render_template("contact.html", msg_sent=True, form=form, recaptcha_site_key=recaptcha_site_key)
+        else:
+            return render_template("contact.html", msg_sent=False, form=form, recaptcha_site_key=recaptcha_site_key, recaptcha_failed=True)
+    return render_template("contact.html", msg_sent=False, form=form, recaptcha_site_key=recaptcha_site_key)
 
 # Data Engineering route
 @app.route('/portfolio/dataengineering')
