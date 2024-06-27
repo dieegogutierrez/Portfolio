@@ -1,4 +1,5 @@
 import os
+import requests
 from website import app, mail, recaptcha
 from website.forms import MyForm
 from datetime import datetime
@@ -32,8 +33,15 @@ def portfolio():
 def contact():
     form = MyForm()
     recaptcha_site_key = app.config['RECAPTCHA_SITE_KEY']
+    recaptcha_secret_key = app.config['RECAPTCHA_SECRET_KEY']
+    
     if form.validate_on_submit():
-        if recaptcha.verify():
+        recaptcha_response = request.form.get('recaptcha-token')
+        payload = {'secret': recaptcha_secret_key, 'response': recaptcha_response}
+        response = requests.post('https://www.google.com/recaptcha/api/siteverify', data=payload)
+        result = response.json()
+
+        if result.get('success'):
             msg = Message('New Message',
                           sender=os.getenv('MAIL_USERNAME'),
                           recipients=[os.getenv('MAIL_HOTMAIL')])
@@ -45,6 +53,7 @@ def contact():
             return render_template("contact.html", msg_sent=True, form=form, recaptcha_site_key=recaptcha_site_key)
         else:
             return render_template("contact.html", msg_sent=False, form=form, recaptcha_site_key=recaptcha_site_key, recaptcha_failed=True)
+    
     return render_template("contact.html", msg_sent=False, form=form, recaptcha_site_key=recaptcha_site_key)
 
 # Data Engineering route
