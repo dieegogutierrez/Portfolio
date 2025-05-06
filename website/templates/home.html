@@ -1,12 +1,21 @@
 {% extends "layout.html" %}
 {% block content %}
 
-<div class="text-center py-5">
-    <img class="profile-image" src="/static/assets/images/diego.jpeg" alt="diego">
-    <h1 class="display-5 fw-bold text-body-emphasis py-2">I'm Diego Gutierrez,</h1>
-    <div class="col-lg-6 mx-auto">
-      <p class="lead">a Brazilian engineer now living in Montréal, Canada. My dream is to become a tech nomad, designing and implementing full ETL pipelines from anywhere around the globe.</p>
+<div class="text-center pt-2">
+  <img class="profile-image" src="/static/assets/images/diego.jpeg" alt="diego">
+  <h1 class="display-5 fw-bold text-body-emphasis py-2">I'm Diego Gutierrez,</h1>
+  <div class="col-lg-6 mx-auto">
+    <p class="lead">a Brazilian engineer residing in Montréal, specializing in building automated systems that collect, organize, and analyze data. I turn raw information into valuable insights, helping businesses make smarter decisions—efficiently and remotely.</p>
+    <h2 class="fw-bold pt-2">Ready to automate your data?</h2>
+    <div class="d-grid gap-2 d-sm-flex justify-content-sm-center py-2">
+      <a href="{{ url_for('contact') }}" class="btn btn-outline-dark btn-lg px-4 me-sm-3">
+        Let's Work Together →
+      </a>
+      <a href="{{ url_for('services') }}" class="btn btn-dark btn-lg px-4">
+        See What I Can Do For You
+      </a>
     </div>
   </div>
+</div>
 
 {% endblock content %}

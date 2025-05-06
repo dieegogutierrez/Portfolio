@@ -8,6 +8,12 @@ instance/*
 .env
 *.DS_Store
 *.idea
+website/templates/dataanalysis.html
+website/templates/dataengineering.html
+website/templates/guiapplications.html
+website/templates/portfolio.html
+website/templates/webdevelopment.html
+amazon_scraper.py
 
 ### Flask.Python Stack ###
 # Byte-compiled / optimized / DLL files

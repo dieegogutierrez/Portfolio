@@ -24,9 +24,9 @@ def about():
     return render_template('about.html')
 
 
-@app.route('/portfolio')
-def portfolio():
-    return render_template('portfolio.html')
+@app.route('/services')
+def services():
+    return render_template('services.html')
 
 
 @app.route('/contact', methods=['GET', 'POST'])
@@ -69,27 +69,6 @@ def contact():
             return render_template("contact.html", msg_sent=False, form=form, recaptcha_site_key=recaptcha_site_key, recaptcha_failed=True)
     
     return render_template("contact.html", msg_sent=False, form=form, recaptcha_site_key=recaptcha_site_key)
-
-# Data Engineering route
-@app.route('/portfolio/dataengineering')
-def data_engineering():
-    return render_template('dataengineering.html')
-
-# Data Analysis route
-@app.route('/portfolio/dataanalysis')
-def data_analysis():
-    return render_template('dataanalysis.html')
-
-# Web Development route
-@app.route('/portfolio/webdevelopment')
-def web_development():
-    return render_template('webdevelopment.html')
-
-# GUI Applications route
-@app.route('/portfolio/guiapplications')
-def gui_applications():
-    return render_template('guiapplications.html')
-
 
 @app.errorhandler(404)
 def error_404(error):

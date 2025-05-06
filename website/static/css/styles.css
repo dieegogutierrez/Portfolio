@@ -2,8 +2,8 @@
     background-image: linear-gradient(135deg, #ffffff, #eeeeee);
 }
 .profile-image {
-    border-radius: 100%;
-    width: 18rem;
+    border-radius: 30%;
+    width: 15rem;
 }
 .background-about-image {
     background-image: url("/static/assets/images/brazil-canada-flag.jpg");
@@ -68,4 +68,38 @@
 .featurette-divider {
     margin-top: 2rem;
     margin-bottom: 2rem;
+}
+.step-badge {
+    width: 60px;
+    height: 60px;
+    background-color: #f8f9fa;
+    border: 2px solid #2c3e50;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+}
+
+.step-number {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.step-icon {
+    position: absolute;
+    bottom: -8px;
+    right: -8px;
+    background: white;
+    border-radius: 50%;
+    padding: 4px;
+    box-shadow: 0 0 0 2px white;
+}
+.gif-container {
+    height: 12rem;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    background: #f8f9fa;
 }
